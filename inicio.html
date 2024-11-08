@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploración del Arte</title>
+    <link rel="stylesheet" href="estilosCSS/styles.css">
+
+
+</head>
+<body class="arte">
+
+
+    <header>
+        <img src="imagenes/escudo.png" class="logo">
+        <h1 class="tituloinicioc">CONOZCAMOS EL ARTE</h1>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <nav class="navegacion" id="navMenu">
+            <ul>
+                <li><a href="inicio.html" class="nav-link">Inicio</a></li>
+                <li><a href="historia.html" class="nav-link">Historia del Arte</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("open");
+        }
+    </script>
+    
+    
+    <!-- Sección de Introducción -->
+    <section class="intro">
+        
+        <div class="info-box">
+            <center><h2>Bienvenido a Conocer sobre Arte</h2></center>
+            <center><p>El arte es una manifestación de la cultura y un reflejo de la creatividad humana a través de los siglos.</p></center>
+            <center><p>En esta página, exploramos la evolución del arte, desde sus raíces clásicas hasta las expresiones modernas y digitales.</p></center>
+        </div>
+        <center><img src="imagenes/imagen1.png" alt="Arte visual" class="intro-image" onclick="mostrarTextoModal()"></center>
+    </center>
+    </section>
+
+    <!-- Modal de introducción -->
+    <div class="modal" id="texto-modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <p>El arte proporciona una vía para explorar emociones y experiencias. Estimula la imaginación, promueve la empatía y fomenta la comprensión de diversas realidades.</p>
+            <img src="imagenes/emociones.jpeg" alt="Imagen de emociones" class="modal-imagen" style="width: 500px; height: auto;">
+        </div>
+    </div>
+
+    <center><h2>Categorías de Arte</h2> </center>
+
+    <!-- Sección de Categorías de Arte -->
+    <section class="categorias">
+        
+        <div class="info-box">
+            <h3>Pintura Clásica y Moderna</h3>
+            <img src="imagenes/clasico.jfif" alt="Ejemplo de Pintura" class="info-image" onclick="openModal(this)">
+            <p>La pintura ha experimentado una notable evolución a lo largo de la historia, desde sus inicios en las pinturas rupestres y los frescos de la antigua Roma, hasta las innovadoras obras de los maestros renacentistas y las audaces propuestas del arte moderno. La pintura clásica, representada por artistas como Leonardo da Vinci, Rafael y Miguel Ángel, se centró en la perfección de la forma humana, la perspectiva y la luz, mientras que el arte moderno, con figuras como Pablo Picasso y Jackson Pollock, rompió con las tradiciones, dando paso a la abstracción, el cubismo y la expresión subjetiva. A través de estos cambios, la pintura ha reflejado no solo el contexto histórico de su tiempo, sino también las transformaciones en la percepción humana, el individuo y su relación con el mundo. Este recorrido, de lo figurativo a lo abstracto, muestra cómo los artistas han explorado y cuestionado la representación visual a lo largo de los siglos.</p>
+            <h3>Algunas obras </h3>
+            <div class="info-box">
+                <img src="imagenes/van.jpeg" alt="Ejemplo de Pintura" class="info-image" onclick="openModal(this)">
+                <p><strong>La noche estrellada, de Vincent Van Gogh</strong> <br>
+                    La obra maestra del holandés fue pintada en 1889 por Van Gogh en el manicomio de Saint-Rémy, donde se recluyó hacia el final de su vida. De hecho, el lienzo parece reflejar su turbulento estado mental del autor postimpresionista en ese momento, ya que el cielo nocturno cobra vida con remolinos y orbes de pinceles aplicados frenéticamente que brotan del yin y el yang de sus demonios personales y de su asombro por la naturaleza</p>          
+            </div> <br>
+            <div class="info-box">
+                <img src="imagenes/cena.jpeg" alt="Ejemplo de Pintura" class="info-image" onclick="openModal(this)">
+                <p><strong>La última cena, de Leonardo Da Vinci</strong> <br>
+                    Es una pintura mural realizada entre los años 1495 y 1498 por el multifacético Leonardo da Vinci (1452-1519). Fue encargada por Ludovico Sforza para el refectorio del Convento de Santa Maria delle Grazie en Milán, Italia y el artista no cobró por ella,</p>          
+            </div> <br>
+            <div class="info-box">
+                <img src="imagenes/joven.jpeg" alt="Ejemplo de Pintura" class="info-image" onclick="openModal(this)">
+                <p><strong>La joven de la perla, de Johannes Vermeer</strong> <br>
+                    También conocida como Muchacha con turbante, es una de las obras maestras del pintor neerlandés Johannes Vermeer. Data de 1665 y tiene a la perla como punto focal del cuadro.</p>          
+            </div>  
+
+        </div>
+
+        <div class="info-box">
+            <h3>Escultura y Arte en 3D</h3>
+            <img src="imagenes/imagen2.webp" alt="Ejemplo de Escultura" class="info-image" onclick="openModal(this)">
+            <p>La escultura ha sido una forma fundamental de expresión artística desde la antigüedad, con grandes obras creadas en materiales como mármol, bronce y madera para representar tanto lo divino como lo humano. Desde las estatuas de la antigua Grecia y Roma, pasando por las innovaciones del Renacimiento, como las esculturas de Miguel Ángel, hasta las modernas y contemporáneas esculturas abstractas y conceptuales de artistas como Henry Moore y Alexander Calder, la escultura ha evolucionado no solo en estilo, sino también en los materiales y las técnicas empleadas. En el siglo XX, con la aparición de nuevas tecnologías y el uso de materiales como el plástico y el metal, la escultura se expandió hacia el arte en 3D, explorando la relación del espacio, el volumen y la percepción. El arte contemporáneo también ha abrazado la escultura digital, usando software para crear formas y estructuras tridimensionales que desdibujan las fronteras entre lo físico y lo virtual, permitiendo nuevas formas de interacción con el espectador.</p>
+            <h3>Algunas obras </h3>
+            <div class="info-box">
+                <img src="imagenes/modelado.jpeg" alt="Ejemplo de Pintura" class="info-image" onclick="openModal(this)">
+                <p>
+                    Si te gusta el campo del modelado digital y quieres dedicarte a ello profesionalmente, puedes formarte en animación y aprender diferentes herramientas y software con nuestro Máster en Motion Graphics. Una formación que podrás aplicar a proyectos empresariales o a cualquier proyecto dentro del ámbito audiovisual.</p>          
+            </div>  
+
+            <div class="info-box">
+                <img src="imagenes/digital.jpeg" alt="Ejemplo de Pintura" class="info-image" onclick="openModal(this)">
+                <p>
+                    La escultura digital, como el arte en general que usa este formato, se basa en software de programas vectoriales que es capaz de crear piezas como las que siempre hemos modelado con nuestras manos, pero a través de una pantalla digital. En este artículo, vamos a conocer en qué consiste y cuáles son los usos que se le están dando, así como las distintas técnicas y programas que se utilizan para su creación.</p>          
+            </div>  
+
+            <div class="info-box">
+                <img src="imagenes/memor.jpg" alt="Ejemplo de Pintura" class="info-image" onclick="openModal(this)">
+                <p>
+                    La integración de la tecnología de impresión 3D en el mundo del arte ha abierto nuevas posibilidades a los artistas para crear piezas de arte únicas e intrincadas que antes eran imposibles de realizar. Con el uso de programas de diseño asistido por ordenador (CAD), artistas y diseñadores pueden crear modelos 3D de sus obras, que luego pueden imprimirse en 3D para convertirlas en esculturas, instalaciones y otras obras de arte. En este artículo exploraremos algunos de los ejemplos más destacados de esculturas, instalaciones y otras obras de arte impresas en 3D.</p>          
+            </div> 
+
+
+        </div>
+        <div class="info-box">
+            <h3>Fotografía Contemporánea</h3>
+            <img src="imagenes/contemporanea.jpg" alt="Ejemplo de Fotografía" class="info-image" onclick="openModal(this)">
+            <p>La fotografía ha recorrido un largo camino desde sus inicios en el siglo XIX, evolucionando desde las primeras daguerrotipos hasta las imágenes digitales de alta resolución que dominan el panorama actual. En el arte contemporáneo, la fotografía ha alcanzado nuevas dimensiones, no solo como medio para documentar la realidad, sino también como forma de expresión artística. A través de géneros como el fotoperiodismo, la fotografía conceptual y la fotografía artística, los fotógrafos contemporáneos exploran temas como la identidad, la memoria, la política y la sociedad. Además, la fotografía digital ha permitido la manipulación y edición de imágenes, llevando el medio hacia nuevas fronteras creativas. Artistas como Cindy Sherman y Andreas Gursky han transformado la fotografía en una herramienta poderosa para cuestionar la realidad y desafiar la percepción del espectador, convirtiéndola en una de las formas de arte más influyentes y versátiles del siglo XXI.</p>
+        
+            <div class="info-box">
+                <img src="imagenes/fotocon.jpeg" alt="Ejemplo de Pintura" class="info-image" onclick="openModal(this)">
+                <p>
+                    La fotografía contemporánea es aquella que se lleva realizando desde la década de los 80 hasta la actualidad. Desde este momento y por primera vez en la historia la fotografía se empieza a considerar como un arte conceptual.
+                    Por ello, dejó de ser la producción de imágenes informativas, aunque en parte lo sigue siendo, y se comenzó a realizar fotografías con un fin estético. La fotografía evolucionó como arte hasta el punto de que se montan exposiciones de pintura y escultura, pero también de fotografía y hay todo un mercado artístico alrededor de este sector.</p>          
+            </div>  
+
+        </div>
+    </section>
+
+    <!-- Sección de Documentales -->
+    <section class="videos">
+        <h2>Documentales sobre Arte</h2>
+        <p>Conoce el mundo del arte a través de estos documentales, que muestran la vida de grandes pintores y la evolución de estilos artísticos.</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DzR4Cvn1Sn4" title="Documental 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LbMdbjxUPPc" title="Documental 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Modal para imágenes -->
+    <div class="modal" id="image-modal">
+        <span class="close" id="close-modal">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="image-caption"></div>
+    </div>
+
+    <!-- JavaScript para abrir imágenes en un modal -->
+    <script src="scripts.js"></script>
+
+</body>
+</html>

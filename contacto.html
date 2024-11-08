@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Arte</title>
+    <link rel="stylesheet" href="estilosCSS/styles.css">
+</head>
+<body class="contacto">
+    <!-- Encabezado -->
+    <header>
+        <img src="imagenes/escudo.png" class="logo">
+        <h1 class="tituloinicioc">CONTACTO</h1>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <nav class="navegacion" id="navMenu">
+            <ul>
+                <li><a href="inicio.html" class="nav-link">Inicio</a></li>
+                <li><a href="historia.html" class="nav-link">Historia del Arte</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("open");
+        }
+    </script>
+    
+    <!-- Sección de Contacto -->
+    <section class="contacto-section">
+        <h2>Contáctanos</h2>
+        <center>
+        <p>Para consultas, colaboraciones o cualquier otra pregunta, </p>
+        <p>completa el formulario a continuación o comunícate con nosotros por los medios indicados.</p>
+        </center>
+        
+        <!-- Formulario de Contacto -->
+        <form id="formulario-contacto" class="formulario-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <!-- Información de Contacto -->
+    <section class="informacion-creadores">
+        <h2>Información de Creadores</h2>
+        <p><strong>Creadores: </strong>Angeli Mesa</p>
+        <p><strong>Teléfono:</strong> 313 456 7890</p>
+        <p><strong>Dirección:</strong> Calle 123, Pasto, Nariño</p>
+    </section>
+
+    <!-- Modal para Imágenes Grandes -->
+    <div class="modal" id="image-modal">
+        <span class="close" id="close-modal">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="image-caption"></div>
+    </div>
+
+    <!-- JavaScript para mostrar mensaje de éxito -->
+    <script>
+        // Captura el evento de envío del formulario
+        document.getElementById('formulario-contacto').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío real del formulario
+    
+            // Muestra el mensaje de éxito
+            alert('¡Mensaje enviado exitosamente!');
+    
+            // Redirige a la página de contacto (o recarga la misma página)
+            window.location.href = 'contacto.html';
+        });
+    </script>
+    
+    <!-- JavaScript para imágenes grandes -->
+    <script src="scripts.js"></script>
+</body>
+</html>

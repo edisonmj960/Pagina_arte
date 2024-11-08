@@ -1,0 +1,319 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* --- Header --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    height: 200px;
+    color: white;
+    background-position: center;
+    animation: cambiarFondo 12s infinite;
+}
+
+.tituloinicioc {
+    font-size: 4.5rem;
+    color: #caff0c;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+
+}
+
+.logo {
+    position: absolute;
+    left: 20px;    /* Mantiene el logo alineado a la izquierda */
+    width: 148px;
+    height: auto;
+    z-index: 0; 
+    bottom: 210px;
+}
+
+.encabezado {
+    background-image: url('../imagenes/fondo5.jpeg');
+    color: #951ba0;
+    padding: 20px;
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  
+}
+
+
+.tituloinicio {
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* --- Menú debajo del Header --- */
+.navegacion {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.navegacion.open {
+    transform: translateX(0);
+}
+
+
+.navegacion ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.navegacion li {
+    margin: 1.5rem 0;
+}
+
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+.nav-link:hover {
+    color: #ff6347;
+}
+
+
+/* --- Botón para Abrir el Menú --- */
+.menu-button {
+    font-size: 1.5rem;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+/* Animación de cambio de fondo */
+@keyframes cambiarFondo {
+    0% {
+        background-image: url('../imagenes/imagen3.jpg'); /* Primera imagen */
+    }
+    33% {
+        background-image: url('../imagenes/imagen8.jpg'); /* Segunda imagen */
+    }
+    66% {
+        background-image: url('../imagenes/imagen5.jpg'); /* Tercera imagen */
+    }
+    100% {
+        background-image: url('../imagenes/imagen7.jpg'); /* Vuelve a la primera imagen */
+    }
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: #007bff;
+    color: white;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ------------------------ Contenido de Página ------------------------ */
+
+.categorias, .videos {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info-box {
+    flex: 1 1 calc(33.333% - 20px);
+    background: #fff;
+    border: 2px solid #f843da;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-image {
+    width: 190px;
+    height: auto;
+    margin-right: 10px;
+    float: left;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+/* Efecto de giro al pasar el mouse */
+.info-image:hover {
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-image: url('../imagenes/imagen10.jpg');
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* ------------------------ Fondo para Página de Arte ------------------------ */
+
+body.arte {
+    background-image: url('../IMAGENES/imagen10.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}       
+
+/* ------------------------ Estilos Responsivos ------------------------ */
+
+@media (max-width: 768px) {
+    .header-content, .categorias, .videos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-box {
+        flex: 1 1 100%;
+    }
+}
+
+/* Animación para el Título */
+@keyframes slideAcross {
+    0% {
+        left: 100%; 
+    }
+    50% {
+        left: -30%; 
+    }
+    100% {
+        left: 100%; 
+    }
+}
+
+
+
+/* Estilos para la sección de contacto */
+.contacto-section {
+    padding: 20px; 
+    margin: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    background-color: #ffffff; 
+}
+
+.contacto-section h2 {
+    color: #333; 
+}
+
+.contacto-section label {
+    display: block; 
+    margin: 10px 0 5px; 
+}
+
+.contacto-section input,
+.contacto-section textarea {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+
+.contacto-section button {
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-top: 10px; 
+}
+
+.contacto-section button:hover {
+    background-color: #0056b3; 
+}
+
+/* Estilos para información de creadores */
+.informacion-creadores {
+    padding: 20px; 
+    margin: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    background-color: #f9f9f9; 
+}
